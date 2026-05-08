@@ -2,21 +2,6 @@ version: '3.9'
 
 services:
 
-  backend:
-    build:
-      context: ./backend
-    container_name: taskflow-backend
-    restart: always
-    env_file:
-      - ./backend/.env
-    ports:
-      - "5000:5000"
-    depends_on:
-      - postgres
-      - redis
-    networks:
-      - taskflow-network
-
   postgres:
     image: postgres:17
     container_name: taskflow-postgres
