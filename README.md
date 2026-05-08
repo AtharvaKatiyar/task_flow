@@ -138,10 +138,19 @@ The frontend is a lightweight React UI built to demonstrate and test the backend
 
 ## API Documentation
 
-Swagger documentation is available from the backend docs module.
+Swagger documentation is exposed by the backend at:
 
-- Open the Swagger UI after running the backend
-- Import endpoints into Postman if needed for manual testing
+- `http://localhost:5000/api-docs`
+
+### How to access it locally
+1. Start the backend server.
+2. Open `http://localhost:5000/api-docs` in your browser.
+3. Use the Swagger UI to inspect endpoints, request bodies, and response schemas.
+
+### Postman usage
+- Import the API endpoints manually into Postman if you prefer testing outside Swagger.
+- Use the same base URL: `http://localhost:5000/api/v1`
+- Add the JWT token in the `Authorization: Bearer <token>` header for protected routes.
 
 ## Environment Variables
 
